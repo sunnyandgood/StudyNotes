@@ -134,7 +134,7 @@ public:
         a=test.a;
         str=new char[a]; //深拷贝
         if(str!=0)
-        strcpy(str,test.str);
+            strcpy(str,test.str);
     }
     void Show()
     {
