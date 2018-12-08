@@ -1,4 +1,4 @@
-# 软件工程导论
+<h1 align="center">软件工程导论</h1>
 
 <div align="center"><img src="./第二章、可行性研究/img/软件生命周期.png"/></div>
 
