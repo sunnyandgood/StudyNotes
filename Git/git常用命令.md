@@ -171,3 +171,7 @@
   * 因为他们是两个不同的项目，要把两个不同的项目合并，git需要添加一句代码，在git pull，这句代码是在git 2.9.2版本发生的，最新的版本需要添加--allow-unrelated-histories
 
   * 假如我们的源是origin，分支是master，那么我们 需要这样写git pull origin master --allow-unrelated-histories需要知道，我们的源可以是本地的路径
+
+
+
+* 把github上面的仓库克隆到本地`git clone https://github.com/sunnyandgood/test.git`
