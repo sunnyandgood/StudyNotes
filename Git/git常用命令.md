@@ -1,3 +1,5 @@
+# 一、基础操作
+
 ### 1、配置用户名和邮箱:
   ```
   $ git config --global user.name "Your Name"  
@@ -45,3 +47,47 @@
   user.name=用户名
   user.email=邮箱名
   ```
+  
+  
+# 二、建立本地git仓库
+  
+* 1、cd到你的项目目录
+  ```
+  C:\Users\sunny>D:
+  D:\>cd studyCodes\git\test
+  ```
+* 2、然后,输入git命令`git init`
+  ```
+  D:\studyCodes\git\test>git init
+  Initialized empty Git repository in D:/studyCodes/git/test/.git/
+  ```
+  * 创建了一个空的本地仓库。
+
+* 3、将项目的所有文件添加到缓存中`git add .`
+  ```
+  D:\studyCodes\git\test>git add .
+
+  D:\studyCodes\git\test>
+  ```
+  * `git add .` (注意,后面有个点)表示添加目录下所有文件到缓存库,如果只添加某个文件,只需把 `.` 换成你要添加的文件名即可。 
+
+* 4、将缓存中的文件Commit到git库`git commit -m "添加你的注释,一般是一些更改信息"`
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
