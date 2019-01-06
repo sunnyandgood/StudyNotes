@@ -121,13 +121,53 @@
     D:\studyCodes\git\test>
     ```
   
+# 三、建立远程连接，用代码托管平台存放代码
+* 1、在一些代码托管平台创建项目,例如github或者开源中国社区,这里以github社区为例;创建项目后,会生成一个HTTPS链接,如下:`https://github.com/sunnyandgood/test.git`
+* 2、将本地的库链接到远，终端输入: `git remote add origin HTTPS链接`
+  ```
+  D:\studyCodes\git\test>git remote add origin https://github.com/sunnyandgood/test.git
+
+  D:\studyCodes\git\test>
+  ```
+* 3、上传代码到远程库,上传之前最好先Pull一下,再执行命令: `git pull origin master`
   
+  ```
+  $ git pull origin master
+  warning: no common commits
+  remote: Counting objects: 3, done.
+  remote: Total 3 (delta 0), reused 0 (delta 0)
+  Unpacking objects: 100% (3/3), done.
+  From https://github.com/sunnyandgood/test
+   * branch            master     -> FETCH_HEAD
+   * [new branch]      master     -> origin/master
+  Merge made by the 'recursive' strategy.
+   README.md | 1 +
+   1 file changed, 1 insertion(+)
+   create mode 100644 README.md
+  ```
+  * 即pull成功。
+* 4、接着执行:`git push origin master`
+
+  * 完成后输出:
+  ```
+  $ git push origin master
+  Enumerating objects: 3, done.
+  Counting objects: 100% (3/3), done.
+  Writing objects: 100% (3/3), 245 bytes | 245.00 KiB/s, done.
+  Total 3 (delta 0), reused 0 (delta 0)
+  To https://github.com/sunnyandgood/test.git
+   * [new branch]      master -> master
+  ```
+  * 即将代码成功提交到远程库!!!
   
-  
-  
-  
-  
-  
-  
-  
-  
+* 注：如果pull之后出现 “ refusing to merge unrelated histories ”这句，就证明你合并pull两个不同的项目
+
+  * 出现的问题如何去解决fatal: refusing to merge unrelated histories
+
+  * 我在Github新建一个仓库，写了License，然后把本地一个写了很久仓库上传。
+
+  * 先pull，因为两个仓库不同，发现refusing to merge unrelated histories，无法pull
+
+  * 因为他们是两个不同的项目，要把两个不同的项目合并，git需要添加一句代码，在git pull，这句代码是在git 2.9.2版本发生的，最新的版本需要添加--allow-unrelated-histories
+
+  * 假如我们的源是origin，分支是master，那么我们 需要这样写git pull origin master --allow-unrelated-histories需要知道，我们的源可以是本地的路径
