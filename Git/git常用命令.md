@@ -72,14 +72,54 @@
   * `git add .` (注意,后面有个点)表示添加目录下所有文件到缓存库,如果只添加某个文件,只需把 `.` 换成你要添加的文件名即可。 
 
 * 4、将缓存中的文件Commit到git库`git commit -m "添加你的注释,一般是一些更改信息"`
+  ```
+  D:\studyCodes\git\test>copy con A.txt
+  第一次操作Hello world!
+  ^Z
+  已复制         1 个文件。
+
+  D:\studyCodes\git\test>type A.txt
+  第一次操作Hello world!
+
+  D:\studyCodes\git\test>git add .
+
+  D:\studyCodes\git\test>git commit -m "第一次提交"
+  [master (root-commit) 4e7723a] 第一次提交
+   1 file changed, 1 insertion(+)
+   create mode 100644 A.txt
+
+  D:\studyCodes\git\test>
+  ```
   
+  * 或者不添加注释 `git commit`,但是这样会进入vim(vi)编辑器
   
+    ```
+    # Please enter the commit message for your changes. Lines starting
+    # with '#' will be ignored, and an empty message aborts the commit.
+    #
+    # On branch master
+    # Changes to be committed:
+    #       new file:   B.t
+    #    
+    
+    
+    D:/studyCodes/git/test/.git/COMMIT_EDITMSG [unix] (17:54 06/01/2019) 
+    ```
+    * 在这里可以输入更改信息,也可以不输入,然后 按住 `shift + :`  ,输入`wq` 即可保存信息并退出vim编辑器;
   
-  
-  
-  
-  
-  
+    ```
+    D:\studyCodes\git\test>copy con B.t
+    hahaha
+    ^Z
+    已复制         1 个文件。
+
+    D:\studyCodes\git\test>git add B.t
+
+    D:\studyCodes\git\test>git commit
+    Aborting commit due to empty commit message.
+
+    D:\studyCodes\git\test>
+    ```
   
   
   
